@@ -16,6 +16,7 @@ export default function Login() {
       },
     });
     const options = await res.json();
+
     options.challenge = base64url.decode(options.challenge);
 
     options.allowCredentials = [];

@@ -44,6 +44,9 @@ export async function POST(request: Request) {
       id: base64CredentialID,
       publicKey: base64PublicKey,
       transports: response.response.transports,
+      credentialDeviceType: registrationInfo.credentialDeviceType,
+      attestationFormat: registrationInfo.fmt,
+      aaguid: registrationInfo.aaguid,
     };
     const jsonUserData = JSON.stringify({ [base64CredentialID]: userData });
     const dirPath = path.join(process.cwd(), 'db');

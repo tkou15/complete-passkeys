@@ -8,6 +8,7 @@ import {
 
 export default function Register() {
   async function registerCredential() {
+    // ⓪初回リクエスト
     const res = await fetch('/api/register-request', {
       method: 'POST',
       headers: {
@@ -20,6 +21,7 @@ export default function Register() {
     options.user.id = base64url.decode(options.user.id);
     options.challenge = base64url.decode(options.challenge);
 
+    // ②認証器を呼び出し、Passkeyを登録する
     try {
       // ユーザーが認証を拒否(キャンセルされたときは、例外がスローされる)
       const credential = await navigator.credentials.create({
@@ -53,7 +55,8 @@ export default function Register() {
         responseJSON.authenticatorAttachment =
           publicKeyCredential.authenticatorAttachment as AuthenticatorAttachment;
       }
-      // サーバーにレスポンスボディを送信
+
+      //　サーバーにレスポンスボディを送信
       await fetch('/api/register-response', {
         method: 'POST',
         headers: {
@@ -63,8 +66,8 @@ export default function Register() {
         },
         body: JSON.stringify(responseJSON),
       });
-    } catch (e) {
-      console.error('Credential の作成に失敗しました');
+    } catch (error) {
+      console.error(error);
     }
   }
 
