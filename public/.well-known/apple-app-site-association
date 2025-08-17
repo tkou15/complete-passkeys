@@ -1,0 +1,22 @@
+{
+  "webcredentials": {
+    "apps": [
+      "85693DB6BF.space.app.ko1.test.passkeys"
+    ]
+  },
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "85693DB6BF.space.app.ko1.test.passkeys"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all paths for passkey authentication"
+          }
+        ]
+      }
+    ]
+  }
+}

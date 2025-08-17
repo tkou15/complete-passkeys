@@ -64,14 +64,14 @@ export default function Login() {
     alert(`認証に${(await result.json()).success ? '成功' : '失敗'}しました`);
   }
   return (
-    <div className="m-8 p-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-800">
+    <div className="m-2 sm:m-4 md:m-8 p-4 sm:p-6 md:p-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-800">
       <div className="flex flex-col items-center">
-        <h1 className="mb-16 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl dark:text-white">
+        <h1 className="mb-8 sm:mb-12 md:mb-16 text-lg sm:text-xl md:text-2xl lg:text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white text-center">
           Login
         </h1>
         <button
           type="button"
-          className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-m px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+          className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 w-full sm:w-auto"
           onClick={authentication}
         >
           PassKeyでログイン

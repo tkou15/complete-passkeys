@@ -1,8 +1,8 @@
 export default function SelectBox() {
   return (
-    <div>
-      <select className="d-select d-select-bordered w-full max-w-xs">
-        <option disabled selected>
+    <div className="w-full">
+      <select className="d-select d-select-bordered w-full" defaultValue="">
+        <option disabled value="">
           Who shot first?
         </option>
         <option>Han Solo</option>
