@@ -1,5 +1,7 @@
+import Footer from '@/components/footer';
 import Login from '@/components/login';
 import Register from '@/components/register';
+import RegisterOptions from '@/components/register-options';
 
 export default function Home() {
   return (
@@ -9,15 +11,16 @@ export default function Home() {
       </h1>
       <div className="flex flex-row items-center w-full p-24">
         <div className="basis-1/3">
-          <Register></Register>
+          <Register />
         </div>
         <div className="basis-1/3">
-          <Login></Login>
+          <Login />
         </div>
         <div className="basis-1/3">
-          <Login></Login>
+          <Login />
         </div>
       </div>
+      <RegisterOptions />
     </main>
   );
 }

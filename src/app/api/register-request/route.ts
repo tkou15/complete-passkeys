@@ -19,6 +19,7 @@ export async function POST(request: Request) {
       // requireResidentKeyをtrueに設定すると、認証器はユーザーの情報を保持する
       requireResidentKey: true,
     };
+    
 
     const options = await generateRegistrationOptions({
       // Relying Party（信頼できるパーティ）の名前を指定する
