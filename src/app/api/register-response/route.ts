@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       expectedChallenge: challenge,
       expectedOrigin: origin,
       // PRID(ドメイン)
-      expectedRPID: 'localhost',
+      expectedRPID: 'complete-passkeys.vercel.app',
       // requireUserVerification: ユーザー検証が必要かどうかを指定する
       // falseの場合、認証器はユーザーの存在を確認するだけで、特定のユーザーが認証器を操作していることを検証しない
       requireUserVerification: false,
